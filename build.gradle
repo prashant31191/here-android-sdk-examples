@@ -1,0 +1,3 @@
+task build {
+    dependsOn gradle.includedBuilds*.task(':app:build')
+}
