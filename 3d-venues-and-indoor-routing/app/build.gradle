@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+ext {
+    appId = System.getenv("HERE_SDK_APP_ID") ?: "INSERT YOUR APP ID"
+    appCode = System.getenv("HERE_SDK_APP_CODE") ?: "INSERT YOUR APP CODE"
+    license = System.getenv("HERE_SDK_LICENSE") ?: "INSERT YOUR APP LICENSE"
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "25.0.2"
@@ -10,6 +16,7 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = ["APP_ID": appId, "APP_CODE": appCode, "LICENSE": license]
     }
     buildTypes {
         release {

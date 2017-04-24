@@ -19,13 +19,13 @@
         <!--Developers should put application credentials here.To obtain them, please register the application at developer.here.com-->
         <meta-data
             android:name="com.here.android.maps.appid"
-            android:value="{YOUR_APP_ID}" />
+            android:value="${APP_ID}" />
         <meta-data
             android:name="com.here.android.maps.apptoken"
-            android:value="{YOUR_APP_CODE}" />
+            android:value="${APP_CODE}" />
         <meta-data
             android:name="com.here.android.maps.license.key"
-            android:value="{YOUR_LICENSE_KEY}" />
+            android:value="${LICENSE}" />
 
         <activity
             android:label="@string/app_name"
